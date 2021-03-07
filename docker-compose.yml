@@ -3,6 +3,8 @@ volumes:
   bundle:
 services:
   db:
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
